@@ -1,0 +1,888 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+
+/* XEICON CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5em;
+    margin: 0;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#skills {
+
+    background-color: #f4f6fe;
+}
+
+#portfolio {
+    background: #ebefff;
+}
+
+#footer {
+    background: #211f1f;
+    padding: 30px 0 40px;
+}
+
+
+/* 가운데 영역 */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* 로우 영역 */
+.row {
+    height: auto;
+    padding: 0 28px;
+}
+
+
+/* 스킵 메뉴 */
+#skip {
+    z-index: 9999;
+    position: relative;
+}
+
+#skip a {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 140px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    background: #333;
+}
+
+#skip a:active,
+#skip a:focus {
+    top: 0;
+}
+
+
+/* 네비 영역 */
+/* Toggle Trigger */
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.toggle i {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.toggle.active i {
+    background-color: rgb(119, 172, 229);
+    transform: rotate(315deg);
+}
+
+/* 토글 뒤에 쏙 숨김 */
+.overlay {
+    position: fixed;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.overlay.active {
+    transform: scale(130);
+    opacity: 1;
+    z-index: 20;
+}
+
+.gnb {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.gnb.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.gnb a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2em;
+    line-height: 1.6em;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: bold;
+}
+
+.gnb:hover a {
+    opacity: 0.3;
+}
+
+
+.gnb a:hover {
+    opacity: 1;
+}
+
+.gnb a:before {
+    content: '\f105';
+    font-family: fontawesome;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+.gnb a:hover:before {
+    opacity: 1;
+}
+
+
+.gnb a:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 0;
+    background-color: rgb(30, 55, 130);
+    left: 40px;
+    bottom: 7px;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.gnb a:hover:after {
+    width: 90%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    width: 100vw;
+}
+
+/* Section : Welcome */
+.welcome {
+    background-image: url('../img/웰컴3.jpg');
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.welcome p {
+    font-size: 5em;
+    color: #ffffffa8;
+    line-height: 0.5em;
+    top: 5px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.welcome strong {
+    font-size: 20px;
+    color: #ffffff73;
+}
+
+
+.field {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mouse {
+    width: 38px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.mouse:before {
+    content: '';
+    width: 6px;
+    height: 8px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.8s infinite;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 30px;
+    }
+}
+
+.field span {
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* 레이아웃 */
+/* 컨택트 아이콘 영역 */
+#header {
+    width: 100%;
+    background: #ffffff25;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+
+
+/* sns 아이콘 */
+.sns {
+    z-index: 1;
+    padding-right: 15px;
+    background-color: #ffffff00;
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.sns address {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.sns address a {
+    position: absolute;right:-5px;
+}
+
+.sns a {
+    background-color: #3b5999a0;
+    color: #fff;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sns a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background-color: rgb(14, 14, 92);
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.sns a:hover:before {
+    height: 100%;
+}
+
+.sns a:before {
+    background-color: #3b5999;
+}
+
+
+.sns a i {
+    position: relative;
+    transition: 0.5s;
+}
+
+.sns a:hover i {
+    transform: rotateY(360deg);
+    color: #fff;
+}
+
+
+
+
+.skills {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.skills .skill-title {
+    position: relative;
+    width: 100%;
+    height: 22vh;
+}
+
+
+.skills .skill-title:before {
+    content: '01';
+    position: absolute;
+    top: 65%;
+    left: 0vh;
+    font-size: 5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bolder;
+    color: #969bc424;
+}
+
+.skills .skill-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 75%;
+    /* left:3.5%; */
+    left: 2.5%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1d1f3dde;
+    letter-spacing: -5px;
+}
+
+.skills .skill-title h2 span,
+.portfolio .portfolio_title h2 span {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    animation: bounce .6s ease infinite alternate;
+    transition: 0.5s;
+}
+
+.skills .skill-title h2 span:nth-child(2),
+.portfolio .portfolio_title h2 span:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.skills .skill-title h2 span:nth-child(3),
+.portfolio .portfolio_title h2 span:nth-child(3) {
+    animation-delay: .2s;
+}
+
+.skills .skill-title h2 span:nth-child(4),
+.portfolio .portfolio_title h2 span:nth-child(4) {
+    animation-delay: .3s;
+}
+
+.skills .skill-title h2 span:nth-child(5),
+.portfolio .portfolio_title h2 span:nth-child(5) {
+    animation-delay: .4s;
+}
+
+.skills .skill-title h2 span:nth-child(6),
+.portfolio .portfolio_title h2 span:nth-child(6) {
+    animation-delay: .5s;
+}
+
+.skills .skill-title h2 span:nth-child(7),
+.portfolio .portfolio_title h2 span:nth-child(7) {
+    animation-delay: .6s;
+}
+
+.skills .skill-title h2 span:nth-child(8),
+.portfolio .portfolio_title h2 span:nth-child(8) {
+    animation-delay: .7s;
+}
+
+.skills .skill-title h2 span:nth-child(9),
+.portfolio .portfolio_title h2 span:nth-child(9) {
+    animation-delay: .8s;
+}
+
+@keyframes bounce {
+    100% {
+        top: -5px;
+    }
+}
+
+
+.skills .skill-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vh;
+    height: 64vh;
+    width: 1224px;
+    margin-bottom: 13vh;
+}
+
+
+.skills .skill-section .progress h2 {
+    text-align: center;
+    margin-bottom: 3vh;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 100%;
+}
+
+.skills .skill-section .progress {
+    height: 410px;
+    width: 410px;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px #6a6c913d;
+    position: relative;
+    transition: 0.5s;
+    transform: translateY(20px);
+}
+
+.skills .skill-section .progress .shape {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.skills .skill-section .progress .shape img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.skills .skill-section .progress .caption {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: #000;
+    transition: 0.5s;
+    padding: 0vh 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skills .skill-section .progress:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+
+
+.skills .skill-section .progress .caption {
+    background: linear-gradient(to top, white, transparent);
+}
+
+.skills .skill-section .progress .caption .skill-box,
+.skills .skill-section .progress .caption .license-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.skills .skill-section .progress .caption .license-box {
+    gap: 3vh;
+}
+
+.skills .skill-section .progress .caption .license-box .box1,
+.skills .skill-section .progress .caption .license-box .box2 {
+    height: auto;
+}
+
+.skills .skill-section .progress:hover {
+    transform: translateY(-20px);
+}
+
+/* 그림자 */
+.skills .skill-section .progress:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    background: radial-gradient(rgba(0, 0, 0, 0.15), transparent, transparent);
+    bottom: -90px;
+    transition: 0.5s;
+}
+
+/* 호버시 그림자 작아짐 */
+.skills .skill-section .progress:hover:before {
+    opacity: 0.6;
+    transform: scale(0.8);
+    bottom: -130px;
+}
+
+.skills .skill-section .progress .caption .items {
+    width: 100%;
+}
+
+
+.skills .skill-section .progress .caption .item {
+    margin-bottom: 1.5vh;
+}
+
+.skills .skill-section .progress .caption .item p {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.skills .skill-section .progress .caption .item p span {
+    font-weight: 700;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+.skills .skill-section .progress .caption .item p span:nth-child(1) {
+    float: left;
+}
+
+.skills .skill-section .progress .caption .item p span:nth-child(2) {
+    float: right;
+}
+
+.skills .skill-section .progress .caption .item .progress1 {
+    border: 1px solid #aec3ea;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.skills .skill-section .progress .caption .item .progress1 .progress-level {
+    height: 10px;
+    background: linear-gradient(to right, rgb(57, 42, 141), rgb(140, 158, 203));
+    animation: ani 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes ani {
+    0% {
+        width: 0;
+    }
+}
+
+.skills .skill-section .progress:hover .caption:first-child .item:nth-of-type(1) .progress-level {
+    animation-delay: 0.6s;
+}
+
+.skills .skill-section .progress:hover .caption:first-child .item:nth-of-type(2) .progress-level {
+    animation-delay: 0.8s;
+}
+
+.skills .skill-section .progress:hover .caption:first-child .item:nth-of-type(3) .progress-level {
+    animation-delay: 1s;
+}
+
+.skills .skill-section .progress:hover .caption:first-child .item:nth-of-type(4) .progress-level {
+    animation-delay: 1.2s;
+}
+
+.skills .skill-section .progress:hover .caption:first-child .item:nth-of-type(5) .progress-level {
+    animation-delay: 1.4s;
+}
+
+.skills .skill-section .progress:nth-child(2) ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.skills .skill-section .progress:nth-child(2) .box1 ul {
+    height: 160px;
+}
+
+
+.skills .skill-section .progress:nth-child(2) .box2 ul {
+    height: 50px;
+}
+
+.skills .skill-section .progress:nth-child(2) ul li {
+    font-size: 0.9rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1em;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+
+
+.skills .skill-section .progress:nth-child(2) ul li::before {
+    content: '■';
+    font-size: 8px;
+    margin: 7px;
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    color: #0f245a;
+
+}
+
+/* 포트폴리오 */
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio .portfolio_title {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+}
+
+.portfolio .portfolio_title h2 {
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1d1f3dde;
+    letter-spacing: -5px;
+}
+
+
+.portfolio .portfolio_title:before {
+    content: '02';
+    position: absolute;
+    top: 60%;
+    font-size: 5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bolder;
+    color: #969bc424;
+}
+
+.portfolio ol.portfolio_list {
+    height: 64vh;
+    padding: 3vh;
+    margin-bottom: 7vh;
+}
+
+.portfolio .portfolio_list li {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.portfolio .portfolio_left {
+    width: 55vw;
+    margin-right: 2%;
+    color: black;
+    padding: 2%;
+}
+
+.portfolio .portfolio_list li.desktop .portfolio_left {
+    width: 46vw;
+    padding: 3% 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.portfolio .portfolio_list li.desktop .portfolio_left img {
+    width: 95%;
+}
+
+
+.portfolio .portfolio_right {
+    margin: 7% 0;
+    width: 41vw;
+    height: 64vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+
+}
+
+.portfolio .portfolio_right .portfolio_desc {
+    padding: 2% 0;
+}
+
+.portfolio .portfolio_right .portfolio_desc h3 {
+
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2% 0;
+}
+
+
+.portfolio .portfolio_right .portfolio_desc .summary {
+    margin-bottom: 2%;
+}
+
+.portfolio .portfolio_right .summary p {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+}
+
+.portfolio .portfolio_right .category {
+    height: 25%;
+    margin-bottom: 2%;
+    font-size: 1.2em;
+    font-weight: 700;
+    display: flex;
+    align-items: start;
+}
+
+.portfolio .portfolio_right .category ul li {
+    height: inherit;
+    margin-bottom: 2%;
+    display: block;
+}
+
+.portfolio .portfolio_right .category ul li i {
+    margin: 5px 10px 5px 5px;
+    font-size: 12px;
+}
+
+.portfolio .portfolio_right .category ul li i.first {
+    color: #291d82;
+}
+
+
+.portfolio .portfolio_right .category ul li i.second {
+    color: #4946a2;
+}
+
+
+
+.portfolio .portfolio_right .category ul li i.third {
+    color: #7e87ca;
+
+}
+
+
+.portfolio .portfolio_right .btn {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.portfolio .portfolio_right .btn a {
+    width: 35%;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #000;
+    margin: 2%;
+    padding: 3%;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    box-shadow: 5px 5px 8px #babebc;
+}
+
+.portfolio .portfolio_right .btn a.white {
+    background-color: #fff;
+    /* margin-right: 1%; */
+    color: #0d2769;
+    border: 1px solid #eaecf0;
+}
+
+.portfolio .portfolio_right .btn a.purple {
+    background-color: #27438c;
+    color: #fff;
+    border: 1px solid #2f4d9a;
+}
+
+.portfolio .portfolio_right .btn a:hover {
+    font-size: 14px;
+}
+
+/* 푸터(contacs) */
+.contacts {
+    text-align: center;
+}
+
+.contacts h2 {
+    color: white;
+    font-size: 24px;
+    padding: 10px 0 15px;
+}
+
+.contacts ul {
+    margin: 0 auto;
+}
+
+.contacts li {
+    margin: 0 2px;
+    margin-bottom: 5px;
+
+}
+
+.contacts li a {
+    color: white;
+    font-size: 17px;
+}
+
+.contacts li a i {
+    margin-right: 7px;
+}

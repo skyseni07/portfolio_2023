@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="김나영">
+    <meta name="description" content="김나영 포트폴리오입니다.">
+    <meta name="keywords" content="포트폴리오, 웹 개발, FE">
+    <title>Nayoung's Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/fullpage.css">
+
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="assets/icons/favicon_72.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
+
+    <!-- jQuery CDN 3.5.1  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- font awesome CDN -->
+    <script src="https://kit.fontawesome.com/bd43c1a704.js" crossorigin="anonymous"></script>
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]> 
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script type="text/javascript">
+         alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+      </script>
+   <![endif]-->
+</head>
+
+<body>
+     <!-- 스킵 메뉴 -->
+    <div id="skip">
+        <a rel="bookmark" href="#skills">활용능력</a>
+        <a rel="bookmark" href="#portfolio">포트폴리오</a>
+        <a rel="bookmark" href="#footer">연락처</a>
+    </div>
+    <!-- //스킵 메뉴 -->
+
+    <div class="toggle ">
+        <i class="xi-plus-thin"></i>
+    </div>
+
+    <div class="overlay"></div>
+    <ul class="gnb " id="menu">
+        <li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">about</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">portfolio</a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage">contact</a></li>
+    </ul>
+
+    <header id="header">
+        <div class="sns">
+            <a href="https://nayoung127.tistory.com/"  target="_blank">
+                <i class="fa-solid fa-blog"></i>
+            </a>
+            <address>
+            <a href="mailto:skyseni07@naver.com"  target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+            </a></address>
+            <a href="https://github.com/skyseni07/"  target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <script>
+        $('.toggle').click(function () {
+            $('.toggle, .overlay, .gnb').toggleClass('active')
+        })
+        $('.gnb a').click(function () {
+            $('.toggle, .overlay, .gnb').removeClass('active')
+        })
+    </script>
+
+    <div id="myContainer">  
+        <div id="welcome" class="section welcome">
+            <div>
+                <p>
+                    KIM NAYOUNG<br>
+                    <strong>WEB DEVELOPER PORTFOLIO</strong>
+                </p>
+            </div>
+            <div class="field">
+                <div class="mouse"></div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+
+        <div id="skills" class="section">
+            <div class="container">
+                <div class="row">
+                   <div class="skills">
+                        <div class="skill-title">
+                                <h2>
+                                    <span>A</span>
+                                    <span>b</span>
+                                    <span>o</span>
+                                    <span>u</span>
+                                    <span>t</span>
+                                    <span>&nbsp;</span>
+                                    <span>m</span>
+                                    <span>e</span>
+                                    <span>!</span>
+                                </h2>
+                        </div>
+                        <div class="skill-section">
+                            <div class="progress">
+                                <div class="shape">
+                                    <div class="caption">
+                                        <div class="skill-box">
+                                            <h2>SKILL</h2>
+                                            <div class="items">
+                                                <div class="item">
+                                                    <p>
+                                                        <span>HTML5</span>
+                                                        <span>90%</span>
+                                                    </p>
+                                                    <div class="progress1">
+                                                        <div class="progress-level" style="width: 90%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <p>
+                                                        <span>CSS3</span>
+                                                        <span>85%</span>
+                                                    </p>
+                                                    <div class="progress1">
+                                                        <div class="progress-level" style="width: 85%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <p>
+                                                        <span>JavaScript</span>
+                                                        <span>60%</span>
+                                                    </p>
+                                                    <div class="progress1">
+                                                        <div class="progress-level" style="width: 60%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <p>
+                                                        <span>REACT</span>
+                                                        <span>60%</span>
+                                                    </p>
+                                                    <div class="progress1">
+                                                        <div class="progress-level" style="width: 60%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <p>
+                                                        <span>jQuery</span>
+                                                        <span>45%</span>
+                                                    </p>
+                                                    <div class="progress1">
+                                                        <div class="progress-level" style="width: 45%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/img/책7.jpg" alt="책이미지">
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="shape">
+                                    <div class="caption">
+                                        <div class="license-box">
+                                            <div class="box1">
+                                                <h2>LICENSE</h2>
+                                                <ul>
+                                                    <li>정보처리기사 취득</li>
+                                                    <li>경북산업직업전문학교 - 응용SW엔지니어링 실무과정 수료</li>
+                                                    <li>그린컴퓨터아카데미 - 퍼블리셔 과정 진행 중</li>
+                                                </ul>
+                                            </div>
+                                            <div class="box2">
+                                                <h2>etc.</h2>
+                                                <ul>
+                                                    <li>PhotoShop, Illustrator</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/img/하늘달.jpg" alt="하늘이미지">
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- //skills -->
+
+        <div id="portfolio" class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="portfolio">
+                        <div class="portfolio_title">
+                            <h2>
+                                <span>P</span>
+                                <span>o</span>
+                                <span>r</span>
+                                <span>t</span>
+                                <span>f</span>
+                                <span>o</span>
+                                <span>l</span>
+                                <span>i</span>
+                                <span>o</span>
+                            
+                              </h2>
+                        </div>
+                        <ol class="portfolio_list">
+                            <!-- 해비트래커 포트폴리오 -->
+                            <div class="slide">
+                                <li>
+                                    <div class="portfolio_left">
+                                        <img src="assets/img/habit_tracker.png" alt="투두리스트이미지">
+                                    </div>
+                                    <div class="portfolio_right">
+                                        <div class="portfolio_desc">
+                                            <h3 class="title">HABIT TRACKER APP</h3>
+                                            <div class="summary">
+                                                <p class="desc">
+                                                    기존 투두 리스트에 습관 형성을 위한 기능을 추가한 HABIT TRACKER 어플리케이션입니다. 자주 쓰는 목록을
+                                                    로컬스토리지에
+                                                    저장하여
+                                                    편리하게 사용 가능하며, 완료한 목록을 매일 기록하여 달성률을 확인하여 습관 형성에 도움을 줍니다. CRUD, 커스텀 훅,
+                                                    라우트
+                                                    추가 및
+                                                    반응형 웹으로 구현했습니다. </p>
+                                            </div>
+                                        </div>
+                                        <div class="category">
+                                            <ul>
+                                              <li><i class="fa-solid fa-circle first"></i>REACT</li>
+                                              <li><i class="fa-solid fa-circle second"></i>HTML</li>
+                                              <li><i class="fa-solid fa-circle third"></i>SCSS</li>
+                                            </ul>
+                                          </div>
+                                        <div class="btn">
+                                            <a href="https://github.com/skyseni07/habit_tracker" class="white"
+                                                target="_blank">CODE</a>
+                                            <a href="https://skyseni07.github.io/habit_tracker/" class="purple"
+                                                target="_blank">VIEW</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <!-- //해비트래커 포트폴리오 -->
+
+                            <!-- 메가박스 포트폴리오 -->
+                            <div class="slide">
+                                <li>
+                                    <div class="portfolio_left">
+                                        <img src="assets/img/megabox.png" alt="메가박스사이트이미지">
+                                    </div>
+                                    <div class="portfolio_right">
+                                        <div class="portfolio_desc">
+                                            <h3 class="title">메가박스 랜딩페이지</h3>
+                                            <div class="summary">
+                                                <p class="desc">
+                                                    HTML, CSS, JS를 학습하며 제작한 반응형 웹 사이트입니다. 퍼센트 값을 이용하여 유동적인 크기 설정을 하였습니다.
+                                                    Youtube
+                                                    API를 가져와서
+                                                    영상을 띄워주고, 자바스크립트로 이미지 슬라이드, 선택된
+                                                    탭 메뉴 보여주기 등의 기능을 구현하였습니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="category">
+                                            <ul>
+                                              <li><i class="fa-solid fa-circle first"></i>JavaScript</li>
+                                              <li><i class="fa-solid fa-circle second"></i>HTML, CSS</li>
+                                              <li><i class="fa-solid fa-circle third"></i>jQuery</li>
+                                            </ul>
+                                          </div>
+                                        <div class="btn">
+                                            <a href="https://github.com/skyseni07/megabox/tree/main/assets"
+                                                class="white" target="_blank">CODE</a>
+                                            <a href="https://skyseni07.github.io/megabox_2023/" class="purple"
+                                                target="_blank">VIEW</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <!-- //메가박스 포트폴리오 -->
+
+                            <!-- Your Places 포트폴리오 -->
+                            <div class="slide">
+                                <li>
+                                    <div class="portfolio_left">
+                                        <img src="assets/img/yourplaces_app.png" alt="장소추천앱이미지">
+                                    </div>
+                                    <div class="portfolio_right">
+                                        <div class="portfolio_desc">
+                                            <h3 class="title"> Your Places APP</h3>
+                                            <div class="summary">
+                                                <p class="desc">
+                                                    ReactJS, Node.js, MongoDB, REST API를 학습하며 제작한 장소 추천 어플리케이션입니다. 인증 및
+                                                    권한 부여, 파일
+                                                    업로드,
+                                                    구글 Maps API 활용법 등을 학습하였습니다. 추천하고자 하는 장소를 등록할 수 있으며, 회원가입, 로그인 및 장소
+                                                    등록,
+                                                    편집, 삭제, 지도 보기 등이 가능합니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="category">
+                                            <ul>
+                                              <li><i class="fa-solid fa-circle first"></i>React</li>
+                                              <li><i class="fa-solid fa-circle second"></i>Node.js</li>
+                                              <li><i class="fa-solid fa-circle third"></i>MongoDB</li>
+                                            </ul>
+                                          </div>
+                                        <div class="btn">
+                                            <a href="https://github.com/skyseni07/your_places/tree/master/src"
+                                                class="white" target="_blank">CODE</a>
+                                            <a href="https://acad-mern2023.herokuapp.com/" class="purple"
+                                                target="_blank">VIEW</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <!-- //Your Places 포트폴리오 -->
+
+                            <!-- 그림판 포트폴리오 -->
+                            <div class="slide">
+                                <li class="desktop">
+                                    <div class="portfolio_left">
+                                        <img src="assets/img/그림판.png" alt="그림판이미지">
+                                    </div>
+                                    <div class="portfolio_right">
+                                        <div class="portfolio_desc">
+                                            <h3 class="title">그림판</h3>
+                                            <div class="summary">
+                                                <p class="desc">
+                                                    JavsScript를 학습하며 제작한 바닐라JS와 canvas api를 활용한 그림판입니다. 선 두께를 선택하여 그리거나,
+                                                    색을
+                                                    채우거나,
+                                                    지우거나, 저장하는 등의
+                                                    기본적인 기능 뿐
+                                                    아니라 이미지를 불러올 수 있는 등의 부가적인 기능을 추가하였습니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="category">
+                                            <ul>
+                                              <li><i class="fa-solid fa-circle first"></i>Vanilla JS</li>
+                                              <li><i class="fa-solid fa-circle second"></i>HTML</li>
+                                              <li><i class="fa-solid fa-circle third"></i>CSS</li>
+                                            </ul>
+                                          </div>
+                                        <div class="btn">
+                                            <a href="https://github.com/skyseni07/DRAWING_BOARD" class="white"
+                                                target="_blank">CODE</a>
+                                            <a href="https://skyseni07.github.io/DRAWING_BOARD/" class="purple"
+                                                target="_blank">VIEW</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            <!-- //그림판 포트폴리오 -->
+
+                            <!-- 웹표준 준수 포트폴리오 -->
+                            <!-- <div class="slide">
+                                <li class="desktop">
+                                    <div class="portfolio_left">
+                                        <img src="assets/img/웹표준.png" alt="웹표준준수사이트이미지">
+                                    </div>
+                                    <div class="portfolio_right">
+                                        <div class="portfolio_desc">
+                                            <h3 class="title">웹 표준 준수 웹 사이트</h3>
+                                            <div class="summary">
+                                                <p class="desc">
+                                                    웹 표준 관련 학습을 하며 제작한 웹 표준을 준수한 웹 사이트입니다. 레이아웃 구조, 태그 속성 등에 대해 학습하였고,
+                                                    JavaScript를
+                                                    활용하여 선택한 탭 메뉴 활성화, 윈도우 팝업,
+                                                    레이어 팝업, 이미지 슬라이드 등의 기능을 구현하였습니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="category">
+                                            <ul>
+                                              <li><i class="fa-solid fa-circle first"></i>JavaScript</li>
+                                              <li><i class="fa-solid fa-circle second"></i>HTML, CSS</li>
+                                              <li><i class="fa-solid fa-circle third"></i>jQuery</li>
+                                            </ul>
+                                          </div>
+                                        <div class="btn">
+                                            <a href="https://github.com/skyseni07/Webstandard" class="white"
+                                                target="_blank">CODE</a>
+                                            <a href="https://skyseni07.github.io/Webstandard/" class="purple"
+                                                target="_blank">VIEW</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div> -->
+                            <!-- //웹표준 준수 포트폴리오 -->
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //portfolio -->
+
+        <div id="footer" class="section">
+            <div id="contacts">
+                <div class="container">
+                    <div class="contacts">
+                        <h2><span>Contact</span></h2>
+                        <ul>
+                            <li> <address><a href="mailto:skyseni07@naver.com"><i class="fa-solid fa-envelope"></i><span>skyseni07@naver.com</span></a></i></address>
+                            </li>
+                            <li><a href="https://nayoung127.tistory.com" target="_blank"><i
+                                        class="fa-solid fa-blog"></i></i><span>https://nayoung127.tistory.com/</span></a></i>
+                            </li>
+                            <li><a href="https://github.com/skyseni07" target="_blank"><i
+                                        class="fa-brands fa-github"></i><span>https://github.com/skyseni07/</span></a></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+
+    <!-- 자바스크립트 라이브러리 -->
+    <script src="https://kit.fontawesome.com/1730af3774.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
